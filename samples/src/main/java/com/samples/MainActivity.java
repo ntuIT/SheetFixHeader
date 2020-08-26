@@ -1,5 +1,7 @@
 package com.samples;
 
+import android.app.ActionBar;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -7,6 +9,7 @@ import android.widget.ListView;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
 
@@ -15,12 +18,22 @@ public class MainActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		initView();
+
 		B b[] = new B[] {
 				new B(getString(R.string.simple_adapter), SimpleTable.class),
-				new B(getString(R.string.style_adapter), StyleTable.class),
+				new B(getString(R.string.style_adapter) + " With coordinates position item", StyleTable.class),
 				new B(getString(R.string.family_adapter), FamilyTable.class),
 		};
 		setListAdapter(new ArrayAdapter<B>(this, android.R.layout.simple_list_item_1, android.R.id.text1, b));
+	}
+
+	private void initView() {
+		ActionBar actionBar;
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB
+		) {
+			actionBar = getActionBar();
+		}
 	}
 
 	@Override

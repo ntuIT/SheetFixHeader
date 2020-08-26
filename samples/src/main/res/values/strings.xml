@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="simple_activity">Simple Scroll</string>
+    <string name="style_activity">Style Scroll</string>
+    <string name="family_activity">Mix Sheet</string>
+
     <string name="app_name">TableFixHeaders Sheet</string>
     <string name="simple_adapter">Simple adapter</string>
     <string name="style_adapter">Style adapter</string>

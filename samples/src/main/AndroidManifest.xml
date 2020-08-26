@@ -18,15 +18,15 @@
         </activity>
         <activity
             android:name="com.samples.SimpleTable"
-            android:label="@string/simple_adapter" >
+            android:label="@string/simple_activity" >
         </activity>
         <activity
             android:name="com.samples.StyleTable"
-            android:label="@string/style_adapter" >
+            android:label="@string/style_activity" >
         </activity>
         <activity
             android:name="com.samples.FamilyTable"
-            android:label="@string/family_adapter" >
+            android:label="@string/family_activity" >
         </activity>
     </application>
 
